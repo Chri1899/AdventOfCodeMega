@@ -3,4 +3,5 @@ project(2024_cpp)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(2024_cpp main.cpp)
+add_executable(day01 "src/day01.cpp")
+
