@@ -3,8 +3,16 @@ project(2024_cpp)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(day01
-        src/days/IDay.h
-        src/days/day01.h
-        src/days/day01.cpp)
+set(SOURCES
+        main.cpp
+        src/utils/readfile.cpp
+        src/days/day01.cpp
+)
+
+# Include directories
+include_directories(
+        ${CMAKE_SOURCE_DIR}/src
+)
+
+add_executable(advent ${SOURCES})
 
