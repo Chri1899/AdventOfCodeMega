@@ -7,5 +7,7 @@
 
 class Day01 : public IDay {
 public:
-    void run() override;
+    std::string name() const override { return "Day 01"; }
+    std::string part_one(const std::vector<std::string>& input) override;
+    std::string part_two(const std::vector<std::string>& input) override;
 };

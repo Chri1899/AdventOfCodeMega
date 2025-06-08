@@ -3,9 +3,11 @@ project(2024_cpp)
 
 set(CMAKE_CXX_STANDARD 20)
 
+# Gather source files
 set(SOURCES
         main.cpp
         src/utils/readfile.cpp
+        # Add more days here
         src/days/day01.cpp
 )
 

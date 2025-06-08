@@ -3,17 +3,18 @@
 //
 
 #include "day01.h"
-#include "../utils/readfile.h"
-#include <iostream>
-#include <filesystem>
+#include <string>
 
-// TODO Fix file reading
-void Day01::run() {
-    auto lines = read_file_lines("data/2024/test.txt");
-    std::cout << "Day 01: Input lines = " << lines.size() << "\n";
+std::string Day01::part_one(const std::vector<std::string>& input) {
+    // Test
+    return "Line count = " + std::to_string(input.size());
+}
 
-    // Print contents to verify
-    for (const auto& line : lines) {
-        std::cout << "Line: " << line << "\n";
+std::string Day01::part_two(const std::vector<std::string>& input) {
+    // Test
+    int char_count = 0;
+    for (const auto& line : input) {
+        char_count += line.size();
     }
+    return "Char count = " + std::to_string(char_count);
 }
