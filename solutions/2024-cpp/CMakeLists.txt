@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD 20)
 set(SOURCES
         main.cpp
         src/utils/readfile.cpp
+        src/utils/parser.cpp
+        src/utils/helpers.cpp
         # Add more days here
         src/days/day01.cpp
 )
