@@ -9,3 +9,4 @@
 #include <sstream>
 
 std::vector<std::vector<int>> parse_to_columns_int(const std::vector<std::string>& input);
+std::vector<std::vector<int>> parse_to_rows_int(const std::vector<std::string>& input);

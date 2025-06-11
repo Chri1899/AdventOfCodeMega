@@ -11,6 +11,7 @@ set(SOURCES
         src/utils/helpers.cpp
         # Add more days here
         src/days/day01.cpp
+        src/days/day02.cpp
 )
 
 # Include directories

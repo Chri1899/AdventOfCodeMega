@@ -2,6 +2,7 @@
 // Created by cb-1 on 10/06/2025.
 //
 
+#include <iostream>
 #include "parser.h"
 
 std::vector<std::vector<int>> parse_to_columns_int(const std::vector<std::string>& input) {
@@ -31,4 +32,22 @@ std::vector<std::vector<int>> parse_to_columns_int(const std::vector<std::string
     }
 
     return columns;
+}
+
+std::vector<std::vector<int>> parse_to_rows_int(const std::vector<std::string>& input) {
+    std::vector<std::vector<int>> rows;
+
+    for (const auto& line : input) {
+        std::istringstream iss(line);
+        std::vector<int> row_values;
+        int value;
+
+        while (iss >> value) {
+            row_values.push_back(value);
+        }
+
+        rows.push_back(row_values);
+    }
+
+    return rows;
 }
