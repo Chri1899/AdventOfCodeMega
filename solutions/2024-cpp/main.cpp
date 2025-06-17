@@ -12,6 +12,7 @@
 #include "utils/readfile.h"
 #include "days/day02.h"
 #include "days/day03.h"
+#include "days/day04.h"
 
 std::string get_input_path(int day, bool use_test) {
     std::ostringstream oss;
@@ -25,6 +26,7 @@ int main() {
     days[1] = std::make_unique<Day01>();
     days[2] = std::make_unique<Day02>();
     days[3] = std::make_unique<Day03>();
+    days[4] = std::make_unique<Day04>();
 
     // Get user input
     int day;

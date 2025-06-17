@@ -13,6 +13,7 @@ set(SOURCES
         src/days/day01.cpp
         src/days/day02.cpp
         src/days/day03.cpp
+        src/days/day04.cpp
 )
 
 # Include directories
