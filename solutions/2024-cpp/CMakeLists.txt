@@ -9,6 +9,7 @@ set(SOURCES
         src/utils/readfile.cpp
         src/utils/parser.cpp
         src/utils/helpers.cpp
+        src/utils/Timer.cpp
         # Add more days here
         src/days/day01.cpp
         src/days/day02.cpp

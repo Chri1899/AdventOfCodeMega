@@ -7,12 +7,15 @@
 #include <iomanip>
 #include <unordered_map>
 #include <memory>
+#include <thread>
+#include <chrono>
 #include "days/IDay.h"
 #include "days/day01.h"
 #include "utils/readfile.h"
 #include "days/day02.h"
 #include "days/day03.h"
 #include "days/day04.h"
+#include "utils/Timer.h"
 
 std::string get_input_path(int day, bool use_test) {
     std::ostringstream oss;
@@ -47,9 +50,19 @@ int main() {
     std::string path = get_input_path(day, use_test);
     std::vector<std::string> input = read_file_lines(path);
 
-    // Output result to console
-    std::cout << "\n[" << it->second->name() << " - Part One]: " << it->second->part_one(input) << "\n";
-    std::cout << "[" << it->second->name() << " - Part Two]: " << it->second->part_two(input) << "\n";
+    // Part One
+    {
+        Timer timer("Part 1");
+        std::cout << "\n[" << it->second->name() << " - Part One]: " << it->second->part_one(input) << "\n";
+        std::this_thread::sleep_for(std::chrono::milliseconds(250));
+    }
+
+    // Part 2
+    {
+        Timer timer_two("Part 2");
+        std::cout << "[" << it->second->name() << " - Part Two]: " << it->second->part_two(input) << "\n";
+        std::this_thread::sleep_for(std::chrono::milliseconds(250));
+    }
 
     return 0;
 }
