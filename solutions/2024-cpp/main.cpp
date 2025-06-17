@@ -11,6 +11,7 @@
 #include "days/day01.h"
 #include "utils/readfile.h"
 #include "days/day02.h"
+#include "days/day03.h"
 
 std::string get_input_path(int day, bool use_test) {
     std::ostringstream oss;
@@ -23,6 +24,7 @@ int main() {
     // Add the days here to the map
     days[1] = std::make_unique<Day01>();
     days[2] = std::make_unique<Day02>();
+    days[3] = std::make_unique<Day03>();
 
     // Get user input
     int day;

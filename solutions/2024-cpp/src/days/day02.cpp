@@ -2,8 +2,8 @@
 // Created by cb-1 on 10/06/2025.
 //
 
-#include <iostream>
 #include "day02.h"
+#include <iostream>
 #include "utils/parser.h"
 
 std::string Day02::part_one(const std::vector<std::string>& input) {
