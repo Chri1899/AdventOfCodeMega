@@ -85,3 +85,11 @@ std::pair<std::vector<std::vector<int>>, std::vector<std::vector<int>>> parse_du
 
     return {first_section, second_section};
 }
+
+std::vector<std::vector<char>> parse_to_2d_char(const std::vector<std::string>& input) {
+    std::vector<std::vector<char>> output;
+    for (const std::string &line : input) {
+        output.emplace_back(line.begin(), line.end());
+    }
+    return output;
+}

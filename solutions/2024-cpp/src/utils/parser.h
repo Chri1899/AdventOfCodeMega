@@ -13,3 +13,4 @@ std::vector<std::vector<int>> parse_to_rows_int(const std::vector<std::string>& 
 std::pair<std::vector<std::vector<int>>, std::vector<std::vector<int>>> parse_dual_section_input_to_int(const std::vector<std::string>& input,
                                                                                                         char first_delim,
                                                                                                         char second_delim);
+std::vector<std::vector<char>> parse_to_2d_char(const std::vector<std::string>& input);
