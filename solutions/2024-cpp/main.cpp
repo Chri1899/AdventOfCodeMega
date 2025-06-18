@@ -16,6 +16,7 @@
 #include "days/day03.h"
 #include "days/day04.h"
 #include "utils/Timer.h"
+#include "days/day05.h"
 
 std::string get_input_path(int day, bool use_test) {
     std::ostringstream oss;
@@ -30,6 +31,7 @@ int main() {
     days[2] = std::make_unique<Day02>();
     days[3] = std::make_unique<Day03>();
     days[4] = std::make_unique<Day04>();
+    days[5] = std::make_unique<Day05>();
 
     // Get user input
     int day;

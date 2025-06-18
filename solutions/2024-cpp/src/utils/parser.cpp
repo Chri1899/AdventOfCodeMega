@@ -51,3 +51,37 @@ std::vector<std::vector<int>> parse_to_rows_int(const std::vector<std::string>& 
 
     return rows;
 }
+
+std::pair<std::vector<std::vector<int>>, std::vector<std::vector<int>>> parse_dual_section_input_to_int(const std::vector<std::string>& input,
+                                                                                                        char first_delim,
+                                                                                                        char second_delim)
+{
+    std::vector<std::vector<int>> first_section;
+    std::vector<std::vector<int>> second_section;
+
+    bool in_first_section = true;
+    for (const auto& line : input) {
+        // Check if line break
+        if (line.empty()) {
+            in_first_section = false;
+            continue;
+        }
+
+        std::vector<int> values;
+        std::stringstream ss(line);
+        std::string token;
+        char delim = in_first_section ? first_delim : second_delim;
+
+        while (std::getline(ss, token, delim)) {
+            values.push_back(std::stoi(token));
+        }
+
+        if (in_first_section) {
+            first_section.push_back(values);
+        } else {
+            second_section.push_back(values);
+        }
+    }
+
+    return {first_section, second_section};
+}
