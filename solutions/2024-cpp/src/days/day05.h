@@ -17,5 +17,6 @@ class Day05 : public IDay {
 
     // Update processing
     int get_update_middle_page(const std::vector<int>& update);
-    int process_updates(const std::vector<std::vector<int>>& updates, const std::vector<std::vector<int>>& rules);
+    int process_updates(const std::vector<std::vector<int>>& updates, const std::vector<std::vector<int>>& rules, int part);
+    std::vector<int> reorder_update(const std::vector<int>& update, const std::vector<std::vector<int>>& rules);
 };
